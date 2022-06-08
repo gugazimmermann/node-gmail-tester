@@ -1,6 +1,6 @@
 {
   "name": "node-gmail-tester",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Node.js Gmail client to be used with Cypres",
   "main": "lib/index.js",
   "types": "node-gmail-tester.d.ts",

@@ -1,24 +1,20 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve } from 'path';
 
-const credentialsPath = './config/credentials.json';
-const tokenPath = './config/token.json';
+const credentialsPath = '../../../gmail.credentials.json';
+const tokenPath = '../../../gmail.token.json';
 
 const getCredentials = () => {
-  const test = resolve(__dirname, credentialsPath).toString();
-  console.log(test);
   const credentials = JSON.parse(
-    readFileSync(test),
+    readFileSync(resolve(__dirname, credentialsPath).toString()),
   );
   return credentials.installed;
 };
 
 const getToken = () => {
-  const test = resolve(__dirname, tokenPath).toString();
-  console.log(test);
   try {
     return JSON.parse(
-      readFileSync(test),
+      readFileSync(resolve(__dirname, tokenPath).toString()),
     );
   } catch (error) {
     throw new Error('No token found.');
