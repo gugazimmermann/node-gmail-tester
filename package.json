@@ -1,0 +1,44 @@
+{
+  "name": "node-gmail-tester",
+  "version": "1.0.0",
+  "description": "A simple Node.js Gmail client to be used with Cypres",
+  "main": "lib/index.js",
+  "types": "node-gmail-tester.d.ts",
+  "scripts": {
+    "prepublish": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gugazimmermann/node-gmail-tester.git"
+  },
+  "keywords": [
+    "nodejs",
+    "automation",
+    "email",
+    "google-api",
+    "gmail-api",
+    "cypress",
+    "gmail-checker",
+    "cypress.io",
+    "cypress-plugin"
+  ],
+  "author": "Guga Zimmermann <gugazimmermann@gmail.com> (https://www.linkedin.com/in/guga-zimmermann/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gugazimmermann/node-gmail-tester/issues"
+  },
+  "homepage": "https://github.com/gugazimmermann/node-gmail-tester#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "dependencies": {
+    "googleapis": "^100.0.0"
+  }
+}
