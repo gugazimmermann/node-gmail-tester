@@ -1,4 +1,4 @@
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 
 export default {
   input: './src/index.js',
@@ -7,8 +7,10 @@ export default {
     format: 'cjs',
     name: 'bundle',
   },
+  external: ['googleapis', 'fs', 'path'],
   plugins: [
     babel({
+      babelHelpers: 'bundled',
       exclude: 'node_modules/**',
     }),
   ],

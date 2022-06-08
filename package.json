@@ -32,11 +32,11 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "@rollup/plugin-babel": "^5.3.1",
     "eslint": "^8.17.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "rollup": "^2.75.6",
-    "rollup-plugin-babel": "^4.4.0"
+    "rollup": "^2.75.6"
   },
   "dependencies": {
     "googleapis": "^100.0.0"
