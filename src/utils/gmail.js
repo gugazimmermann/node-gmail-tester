@@ -39,7 +39,8 @@ const getRecentEmail = async (options = {}) => {
   const query = utils.formatQuery(options);
   const oAuth2Client = await auth.authorize();
   const gmailEmails = await getEmails(oAuth2Client, query, options.label);
-  gmailEmails.forEach(async (gmailEmail) => {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const gmailEmail of gmailEmails) {
     const email = {
       from: utils.getHeader('From', gmailEmail.payload.headers),
       subject: utils.getHeader('Subject', gmailEmail.payload.headers),
@@ -50,10 +51,11 @@ const getRecentEmail = async (options = {}) => {
       email.body = utils.getBody(gmailEmail.payload);
     }
     if (options.includeAttachments) {
-      email.attachments = await utils.getAttachments(oAuth2Client, gmailEmail);
+      const attachments = await utils.getAttachments(oAuth2Client, gmailEmail);
+      if (attachments) email.attachments = attachments;
     }
     emails.push(email);
-  });
+  }
   return emails;
 };
 
