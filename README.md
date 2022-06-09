@@ -24,6 +24,8 @@ yarn add --dev node-gmail-tester
 
 * Create the Access Credentials and make sure to select `Desktop app` for the application type. (<https://developers.google.com/workspace/guides/create-credentials>).
 
+* Make sure you have enabled Gmail API for the progect.
+
 * Save the Google Cloud Platform OAuth2 Authentication file named `gmail.credentials.json` in the root of the project folder.
 
 * To create the tokens run the following command in the root of the project and follow the instructions, this will create the file `gmail.token.json`.

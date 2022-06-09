@@ -28,13 +28,13 @@ function getNewToken(oAuth2Client, callback) {
         if (err) return console.error('Error retrieving access token', err);
         oAuth2Client.setCredentials(token);
         fs.writeFile(
-          resolve(__dirname, CREDENTIALS_PATH).toString(),
+          resolve(__dirname, TOKEN_PATH).toString(),
           JSON.stringify(token),
           (err) => {
             if (err) return console.error(err);
             console.log(
               'Token stored to',
-              resolve(__dirname, CREDENTIALS_PATH).toString(),
+              resolve(__dirname, TOKEN_PATH).toString(),
             );
           },
         );
